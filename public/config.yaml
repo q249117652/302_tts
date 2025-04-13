@@ -588,8 +588,7 @@ TTS:
     params: # 自定义请求参数
       gen_text_input: "{prompt_text}" # {prompt_text}会被替换为实际的提示词内容
       ref_text_input: 我要通报批评某些人，为什么一放假回家。就不回我消息，是不想回。还是谁压住了你的手，不让你回，还是手指太短够不到屏幕？你想干嘛？说话！！！
-      ref_audio_input: https://raw.githubusercontent.com/q249117652/302_tts/refs/head
-s/main/public/fufu.mp3
+      ref_audio_input: https://raw.githubusercontent.com/q249117652/302_tts/refs/heads/main/public/fufu.mp3
       # text: "{prompt_text}" # {prompt_text}会被替换为实际的提示词内容
       # speaker: jok老师
       # speed: 1
