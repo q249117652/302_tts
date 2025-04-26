@@ -395,9 +395,9 @@ TTS:
     output_dir: tmp/
     response_format: wav
     reference_id: null
-    reference_audio: ["/tmp/test.wav",]
-    reference_text: ["你弄来这些吟词宴曲来看，还是这些混话来欺负我。",]
-    normalize: true
+    reference_audio: ["/tmp/fufu.wav",]
+    reference_text: ["啧啧啧，你是傻fufu，你还真傻啊，拿提款机随便生病，进个医院就要花好几只fu的钱，没有好身体，提款机的钱能轮上我们花再说了，现在都是工作八小时，如果提款机又怎么累也累的坏的好身体是不是就能二十四小时不停的工作，这样是不是能赚到更多的大米钱？"]
+    normalize: tru
     max_new_tokens: 1024
     chunk_length: 200
     top_p: 0.7
