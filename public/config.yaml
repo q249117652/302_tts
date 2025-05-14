@@ -142,7 +142,7 @@ selected_module:
   # 将根据配置名称对应的type调用实际的LLM适配器
   LLM: ChatGLMLLM
   # TTS将根据配置名称对应的type调用实际的TTS适配器
-  TTS: FishSpeech
+  TTS: CustomTTS
   # 记忆模块，默认不开启记忆；如果想使用超长记忆，推荐使用mem0ai；如果注重隐私，请使用本地的mem_local_short
   Memory: nomem
   # 意图识别模块开启后，可以播放音乐、控制音量、识别退出指令。
@@ -584,11 +584,12 @@ TTS:
     # 自定义的TTS接口服务，请求参数可自定义
     # 要求接口使用GET方式请求，并返回音频文件
     type: custom
-    url: "http://192.168.1.16:7850/basic_tts"
+    url: "http://192.168.1.81:9880/"
     params: # 自定义请求参数
-      gen_text_input: "{prompt_text}" # {prompt_text}会被替换为实际的提示词内容
-      ref_text_input: 我要通报批评某些人，为什么一放假回家。就不回我消息，是不想回。还是谁压住了你的手，不让你回，还是手指太短够不到屏幕？你想干嘛？说话！！！
-      ref_audio_input: https://raw.githubusercontent.com/q249117652/302_tts/refs/heads/main/public/fufu.mp3
+      text: "{prompt_text}" # {prompt_text}会被替换为实际的提示词内容
+      #ref_text_input: 啧啧啧,说你是傻夫妇，你还真傻，拿提款机随便生病，进个医院就要花好几支付的钱，没有好身体，提款机的钱能轮上我们花再说了，现在都是工作八小时，如果提款机又怎么累也累的坏的好身体是不是就能二十四小时不停的工作，这样是不是能赚到更多的大米钱
+      speaker: fufu
+      instruct: 机械感，电子音
       # text: "{prompt_text}" # {prompt_text}会被替换为实际的提示词内容
       # speaker: jok老师
       # speed: 1
@@ -597,4 +598,4 @@ TTS:
     headers: # 自定义请求头
       # Authorization: Bearer xxxx
     format: wav # 接口返回的音频格式
-    output_dir: tmp/
+    output_dir: tmp
